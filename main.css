@@ -9,10 +9,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    width: 100%;
-    font-family: monospace;
 }
 header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bk.jpg);
     height: 80vh;
     background-size: cover;
@@ -24,8 +25,9 @@ header {
     float: left;
 }
 .hero__title {
+    width: 100%;
+    box-sizing: border-box;
     position: absolute;
-    width: 100vw;
     margin-left: 0px;
     margin-top: 0px;
     color: white;
@@ -120,8 +122,7 @@ nav ul li a.active {
     align-items: flex-end;
     justify-content: center;
 }
-.contact {
-    box-sizing: border-box;
+.contact {  
     margin: 0;
     padding: 0;
     height: 10vh;
