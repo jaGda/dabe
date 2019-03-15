@@ -1,0 +1,28 @@
+.to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    background-image: url(/img/up-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.to-top__arrow {
+    display:block;
+    width:100%;
+    height:100%;  
+    transition: 1s;
+}
+
+@media (max-width: 766px) {
+
+    .to-top {
+        bottom: 10px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+}
