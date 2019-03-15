@@ -1,0 +1,50 @@
+#cookies {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+}
+
+.cookies__content {
+    width: 70%;
+    padding: 1%;
+    background-color: grey;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.cookies__paragraph {
+    width:80%;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+#cookies__content__button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer; 
+}
+
+#cookies__content__button:hover{
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+
+@media (max-width: 766px) {
+
+    .cookies__content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
