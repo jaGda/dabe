@@ -91,12 +91,21 @@ nav ul li a.active {
 
 .icon {
     width: 100%;
-    height: 30vh;
-    background-color: black;
+    height: auto;
+    padding: 2%;
+    background-color: #139187;
     color: white;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.operacje, .przeglad, .podsumowanie, .raporty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 .func_descrip {
