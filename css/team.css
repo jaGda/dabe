@@ -62,11 +62,11 @@
         opacity: 0.7;
     }
     .social__link__le {
-        background-image: url(/img/linkedin.png);
+        background-image: url(../img/linkedin.png);
     }
 
     .social__link__gh {
-        background-image: url(/img/github.png);
+        background-image: url(../img/github.png);
     }
 
 }
@@ -138,11 +138,11 @@
         opacity: 0.7;
     }
     .social__link__le {
-        background-image: url(/img/linkedin.png);
+        background-image: url(../img/linkedin.png);
     }
 
     .social__link__gh {
-        background-image: url(/img/github.png);
+        background-image: url(../img/github.png);
     }
 
 } 
@@ -212,11 +212,11 @@
         opacity: 0.7;
     }
     .social__link__le {
-        background-image: url(/img/linkedin.png);
+        background-image: url(../img/linkedin.png);
     }
 
     .social__link__gh {
-        background-image: url(/img/github.png);
+        background-image: url(../img/github.png);
     }
    
 }
