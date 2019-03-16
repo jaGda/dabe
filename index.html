@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/team.css" type="text/css">
     <link rel="stylesheet" href="css/cookies.css" type="text/css">
     <link rel="stylesheet" href="css/to-top.css" type="text/css">
+    <link rel="stylesheet" href="css/newsletter.css" type="text/css">
     <script type="text/javascript" src="./js/to-top.js"></script>
 
 </head>
@@ -22,7 +23,7 @@
     <nav>
         <ul>
             <li><a href="#home" class="active">home</a></li>
-            <li><a href="#functions">Funkcje planera</a></li>
+            <li><a href="#functions">funkcje planera</a></li>
             <li><a href="#about_us">o nas</a></li>
             <li><a href="#newsletter">zapisz się</a></li>
             <li><a href="#footer">kontakt</a></li>
@@ -140,7 +141,24 @@
     </section>
 
     <a id="newsletter"></a>
-    <section class="newsletter">!!! tu będzie formularz ze zdjęciem !!!</section>
+    <section class="newsletterTitle">Skontaktuj się&nbsp;<b>z nami</b></section>
+    <section class="newsletter">
+<div class="newsletter__form">
+    <form action="" method="">
+        <input type="text" placeholder="Imię i nazwisko"><br>
+        <input type="email" placeholder="Adres e-mail"><br>
+        <input type="number" placeholder="Numer telefonu"><br>
+        <textarea placeholder="Tekst wiadomości"></textarea><br>
+        <div class="confirm">
+            <div class="checkbox"><input type="checkbox" id="zgoda" name="zgoda" value="zgoda"></div>
+            <div class="label"><label for="zgoda">Wypełniając formularz zgadzasz się na przetwarzanie Twoich danych w celu nawiązania kontaktu w sprawie powiadomienia o premierze oraz dalszych aktualizacjach DABEfinance.</label></div>
+        </div>
+        <input type="submit" onclick="alert('Dziękujemy!')" value="Wyślij">
+      </form>
+
+</div>
+<div class="newsletter__pic"></div>
+    </section>
 
     <a id="footer"></a>
     <footer class="footer01">

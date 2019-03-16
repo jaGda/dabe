@@ -1,0 +1,226 @@
+@media (max-width: 1199px) { 
+    .newsletterTitle {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+    .newsletter {
+        width: 100%;
+        padding: 5%;
+        height: auto;
+        background-color: white;
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .newsletter__form {
+        width: 75vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type=text],[type=email],[type=number]{
+        width: 70vw;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: .5s;
+    }
+    textarea{
+        width: 70vw;
+        height: 15vh;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: .5s;
+    }
+    input[type=text]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    input[type=email]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    textarea:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    input[type=number]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    .confirm {
+        width: 70vw;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+    }
+    .checkbox {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .label {
+        width: 90%;
+        color: rgb(80, 80, 80);
+        display: flex;
+        align-items: top;
+        justify-content: left;
+    }
+    input[type=submit]{
+        width: 70vw;
+        border: 1px solid #139187;
+        background-color: #139187;
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+    }
+}
+
+@media (min-width: 1200px) {
+    .newsletterTitle {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+    .newsletter {
+        width: 100%;
+        padding: 5%;
+        height: auto;
+        background-color: white;
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .newsletter__form {
+        width: 45vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type=text],[type=email],[type=number]{
+        width: 40vw;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: .5s;
+    }
+    textarea{
+        width: 40vw;
+        height: 15vh;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: .5s;
+    }
+    input[type=text]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    input[type=email]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    textarea:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    input[type=number]:focus{
+        border-color:#139187;
+        box-shadow: 0 0 8px 0 #139187;
+    }
+    .confirm {
+        width: 40vw;
+        border: 1px solid rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+    }
+    .checkbox {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .label {
+        width: 90%;
+        color: rgb(80, 80, 80);
+        display: flex;
+        align-items: top;
+        justify-content: left;
+    }
+    input[type=submit]{
+        width: 40vw;
+        border: 1px solid #139187;
+        background-color: #139187;
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+    }
+    .newsletter__pic {
+        width: 45vw;
+        height: 50vh;
+        background-image: url(../img/money.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        margin: 8px 0;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
