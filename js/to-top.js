@@ -1,13 +1,14 @@
-document.ready(function () {
-    "#to-top".hide();
-    (function () {
-        window.scroll(function () {
-            if (this.scrollTop() > 300) {
-                '#to-top'.fadeIn();
-            }
-            else {
-                '#to-top'.fadeOut();
-            }
-        });
-    });
-});
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("to-top").style.display = "block";
+  } else {
+    document.getElementById("to-top").style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
