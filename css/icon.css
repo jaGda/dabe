@@ -1,0 +1,47 @@
+@media (max-width: 766px) { 
+    .icon {
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        background-color: #139187;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .icon__svg {
+        height: 50px;
+    }
+    .operacje, .przeglad, .podsumowanie, .raporty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: .7em;
+    }
+}
+
+@media (min-width: 767px) { 
+    .icon {
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        background-color: #139187;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .icon__svg {
+        height: 100px;
+    }
+    .operacje, .przeglad, .podsumowanie, .raporty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+{
