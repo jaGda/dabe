@@ -118,6 +118,82 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
 }
+.newsletterTitle {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(80, 80, 80);
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.newsletter__imputs {
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text],[type=email],[type=number]{
+    width: 40vw;
+    border: 1px solid rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    margin: 8px 0;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+textarea{
+    width: 40vw;
+    height: 15vh;
+    border: 1px solid rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    margin: 8px 0;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+input[type=submit]{
+    width: 40vw;
+    border: 1px solid #139187;
+    background-color: #139187;
+    border-radius: 20px;
+    margin: 8px 0;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+}
+input[type=text]:focus{
+    border-color:#139187;
+    box-shadow: 0 0 8px 0 #139187;
+}
+input[type=email]:focus{
+    border-color:#139187;
+    box-shadow: 0 0 8px 0 #139187;
+}
+textarea:focus{
+    border-color:#139187;
+    box-shadow: 0 0 8px 0 #139187;
+}
+input[type=number]:focus{
+    border-color:#139187;
+    box-shadow: 0 0 8px 0 #139187;
+}
+
+.newsletter__pic {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .footer01 {
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bk.jpg);
