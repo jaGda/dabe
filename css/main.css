@@ -50,16 +50,6 @@ header {
     text-align: center;
 }
 
-.func_descrip {
-    width: 100%;
-    height: 50vh;
-    background-color: white;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .footer01 {
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/bk.jpg);
     width: 100%;
