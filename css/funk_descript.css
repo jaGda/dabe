@@ -9,21 +9,32 @@
     justify-content: center;
     padding: 5%;
 }
-.func_descrip__operacje, .func_descrip__podsumowanie, .func_descrip__przeglad, .func_descrip__raporty {
+.func_descrip__con {
     height: auto;
-    width: 75vw;
+    width: 90vw;
     background-color: rgb(245, 245, 245);
     border-radius: 20px;
     display: flex;
-    padding: 1%;
+    padding: 2%;
     justify-content: space-around;
     align-items: center;
     color: rgb(80, 80, 80);
 }
+.func_descrip__con__imgbg {
+    height: auto;
+    padding: 2%;
+    background-color: #139187;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.func_descrip__con__txtbg {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    float: left;
+    color: rgb(80, 80, 80);
+}
 .icon__svg1 {
     height: 100px;
-}
-.func_descrip__bg {
-    height: 100px;
-    background-color: black;
-}
