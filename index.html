@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/nav.css" type="text/css">
     <link rel="stylesheet" href="css/icon.css" type="text/css">
     <link rel="stylesheet" href="css/funk_descript.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
     <script type="text/javascript" src="./js/to-top.js"></script>
 
 </head>
@@ -24,6 +25,7 @@
 <body>
 
     <nav>
+
         <ul>
             <li><a href="#home">home</a></li>
             <li><a href="#functions">funkcje planera</a></li>
@@ -34,33 +36,26 @@
     </nav>
 
     <header id="home">
-        <input type="radio" name="images" id="r1" checked>
-        <input type="radio" name="images" id="r2">
-        <input type="radio" name="images" id="r3">
-
-        <div class="slide_img" id="one">
-            <img src="img/bk.jpg">
-        </div>
-
-        <div class="slide_img" id="two">
-            <img src="img/bk_2.jpg">
-        </div>
-
-        <div class="slide_img" id="three">
-            <img src="img/bk_3.jpg">
-        </div>
-
-        <div class="nav1">
-            <label class="dots" id="dot1" for="r1"></label>
-            <label class="dots" id="dot2" for="r2"></label>
-            <label class="dots" id="dot3" for="r3"></label>
-        </div>
-
-        <div class="hero__title">
-            Zaplanuj swoje finanse już dziś!
-        </div>
-        <div class="logo">
-            <img src="img/logo.png">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/bk.jpg" class="mySlides__img">
+                <div class="text">Zaplanuj swoje finanse już dziś!</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="img/bk_2.jpg" class="mySlides__img">
+                <div class="text">Zaplanuj swoje finanse już dziś!</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="img/bk_3.jpg" class="mySlides__img">
+                <div class="text">Zaplanuj swoje finanse już dziś!</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="dots">
+                <span class="dots__span" onclick="currentSlide(1)"></span>
+                <span class="dots__span" onclick="currentSlide(2)"></span>
+                <span class="dots__span" onclick="currentSlide(3)"></span>
+            </div>
         </div>
     </header>
 
@@ -278,6 +273,7 @@
 
     <script type="text/javascript" src="./js/cookies.js"></script>
     <script type="text/javascript" src="./js/activeNav.js"></script>
+    <script type="text/javascript" src="./js/slider.js"></script>
 </body>
 
 </html>

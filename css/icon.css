@@ -24,7 +24,8 @@
 
 @media (min-width: 767px) { 
     .icon {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         height: auto;
         padding: 2%;
         background-color: #139187;

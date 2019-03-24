@@ -7,8 +7,3 @@ function scrollFunction() {
     document.getElementById("to-top").style.display = "none";
   }
 }
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}

@@ -150,7 +150,8 @@
 @media (min-width: 1200px) {
     
     .team_members {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         background: rgb(245, 245, 245);
         display: flex;
         flex-flow: row nowrap;
