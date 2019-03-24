@@ -4,6 +4,8 @@ showSlidesAutomatic();
 function showSlidesAutomatic() {
   let slides = document.getElementsByClassName("mySlides");
   slides = [...slides];
+  let dots = document.getElementsByClassName("dots__span");
+  dots = [...dots];
 
   slides.forEach(e => {
     e.style.display = 'none'
@@ -15,7 +17,12 @@ function showSlidesAutomatic() {
     slideIndexAuto = 1
   };
 
+  dots.forEach(e => {
+    e.className = e.className.replace('active', '');
+  });
+
   slides[slideIndexAuto - 1].style.display = "block";
+  dots[slideIndexAuto - 1].classList.add("active");
   setTimeout(showSlidesAutomatic, 3000);
 }
 

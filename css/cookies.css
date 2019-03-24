@@ -9,7 +9,7 @@
 .cookies__content {
     width: 70%;
     padding: 1%;
-    background-color: grey;
+    background-color: rgba(56, 56, 56, 0.7);
     border-radius: 20px;
     display: flex;
     flex-direction: row-reverse;

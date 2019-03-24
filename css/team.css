@@ -1,78 +1,93 @@
-@media (max-width: 766px) { 
+.team_members {
+    width: 100%;
+    background: rgb(245, 245, 245);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.member {
+    flex-basis: 90%;
+    margin: 5% auto 0;
+}
+
+.member:last-child {
+    margin-bottom: 5%;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    box-shadow: 6px 6px 20px 10px rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+
+.photo__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+.member__header {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.member__info {
+    text-align: center;
+    padding: 2.5% 2.5% 0;
+}
+
+.social {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(19, 145, 135, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo:hover .photo__img{
+    transform: rotateY(180deg);
+    transition: 4s;
+} 
+
+.photo:hover .social {
+    opacity: .8;
+    transition: 4s;
+}
+
+.social__link {
+    width: 60px;  
+    height: 60px; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    opacity: 0.5;
+} 
+.social__link__le {
+    background-image: url(../img/linkedin.png);
+}
+
+.social__link__gh {
+    background-image: url(../img/github.png);
+}
+
+.social__link:hover {
+    opacity: 1;
+} 
+@media (max-width: 76px) {
     
-    .team_members {
-        width: 100%;
-        background: rgb(245, 245, 245);
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
-
-    .member {
-        width: 90%;
-        margin: 5% auto 0;
-    }
-
-    .member:last-child {
-        margin-bottom: 5%;
-    }
-
-    .photo {
-        width: 100%;
-        height: auto;
-        padding: 2%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .photo__img {
-        width: 90%;
-        height: auto;
-        opacity: 0.9;
-    }
-
-    .member__header {
-        text-align: center;
-    }
-
-    .member__info {
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 2.5%;
-        text-align: justify;
-    }
-
-    .social {
-        width: 100%;
-        height: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .social__anchor {
-        width: 10%;
-        height: inherit;
-    }
-    .social__link {
-        height: inherit;      
-        background-repeat: no-repeat; 
-        background-size: contain;
-        opacity: 0.7;
-    }
-    .social__link__le {
-        background-image: url(../img/linkedin.png);
-    }
-
-    .social__link__gh {
-        background-image: url(../img/github.png);
-    }
-
 }
 
 @media (min-width: 767px) {
-
     .team_members {
         width: 100%;
         background: rgb(245, 245, 245);
@@ -82,76 +97,17 @@
     }
 
     .member {
-        width: 45%;
+        flex-basis: 45%;
         margin:2% 0;
     }
-
-    .photo {
-        width: 100%;
-        height: auto;
-        padding: 2%; 
-        box-shadow: 6px 6px 20px 10px rgba(0, 0, 0, 0.19);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .photo__img {
-        width: 100%;
-        height: auto;
-        opacity: 0.9;
-    }
-
-    .photo__img:hover {
-        transform: scale(1.1);
-        opacity: 1;
-        transition: 0.3s; 
-    }
-
-    .member__header {
-        text-align: center;
-        padding-top: 5%;
-    }
-
-    .member__info {
-        text-align: justify;
-        padding: 2.5%;
-        padding-bottom: 0;
-    }
-
-    .social {
-        width: 100%;
-        height: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .social__anchor {
-        width: 10%;
-        height: inherit;
-    }
-    .social__link {
-        height: inherit;      
-        background-repeat: no-repeat; 
-        background-size: contain;
-        opacity: 0.7;
-    }
-    .social__link__le {
-        background-image: url(../img/linkedin.png);
-    }
-
-    .social__link__gh {
-        background-image: url(../img/github.png);
-    }
-
 } 
 
 @media (min-width: 1200px) {
-    
     .team_members {
         width: 90%;
         margin: 0 auto;
+        padding: 2.5% 0;
+        border-radius: 20px;
         background: rgb(245, 245, 245);
         display: flex;
         flex-flow: row nowrap;
@@ -165,62 +121,7 @@
         flex-direction: column;
     }
 
-    .photo {
-        width: 100%;
-        height: auto;
-        padding: 2%;
-        box-shadow: 6px 6px 20px 10px rgba(0, 0, 0, 0.19);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .member:last-child {
+        margin-bottom: 2%;
     }
-
-    .photo__img {
-        width: 100%;
-        height: auto;
-        opacity: 0.9;
-    }
-
-    .photo__img:hover {
-        transform: scale(1.1);
-        opacity: 1;
-        transition: 0.3s; 
-    }
-
-    .member__header {
-        text-align: center;
-        padding-top: 5%;
-    }
-
-    .member__info {
-        text-align: justify;
-        padding: 2.5% 2.5% 0;
-    }
-
-    .social {
-        width: 100%;
-        height: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .social__anchor {
-        width: 10%;
-        height: inherit;
-    }
-    .social__link {
-        height: inherit;      
-        background-repeat: no-repeat; 
-        background-size: contain;
-        opacity: 0.7;
-    }
-    .social__link__le {
-        background-image: url(../img/linkedin.png);
-    }
-
-    .social__link__gh {
-        background-image: url(../img/github.png);
-    }
-   
 }

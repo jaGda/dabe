@@ -5,7 +5,7 @@
 .mySlides__img {
     vertical-align: middle;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
 }
 
 .slideshow-container {
@@ -94,90 +94,3 @@
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
 }
-
-/* header {
-    position: relative;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0; 
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.slide_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.slide_img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-
-}
-
-.nav1 {
-    width: 100%;
-    height: 11px;
-    bottom: 55px;
-    position: absolute;
-    text-align: center;
-    z-index: 99;
-}
-
-.dots {
-    top: -5px;
-    width: 18px;
-    height: 18px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 50%;
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-#r1:not(:checked) ~ #one,
-#r2:not(:checked) ~ #two,
-#r3:not(:checked) ~ #three {
-    display: none;
-}
-
-#r1, #r2, #r3 {
-    display: none;
-}
-
-#r1:checked ~ .nav1 #dot1,
-#r2:checked ~ .nav1 #dot2,
-#r3:checked ~ .nav1 #dot3 {
-    background: white;
-}
-
-.logo img {
-    width: 100%;
-}
-
-.logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10%;
-    height: auto;
-    margin-top: 20px;
-    pointer-events: none;
-}
-
-.hero__title {
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    margin-left: 0px;
-    margin-top: 0px;
-    color: white;
-    text-shadow: 2px 2px black;
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: center;
-    bottom: 100px;
-} */
