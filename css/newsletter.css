@@ -7,7 +7,7 @@
         justify-content: center;
         color: rgb(80, 80, 80);
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 1em;
     }
     .newsletter {
         width: 100%;
@@ -21,14 +21,14 @@
         flex-direction: column;
     }
     .newsletter__form {
-        width: 75vw;
+        width: 90vw;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     input[type=text],[type=email],[type=number]{
-        width: 70vw;
+        width: 90vw;
         border: 1px solid rgb(245, 245, 245);
         background-color: rgb(245, 245, 245);
         border-radius: 20px;
@@ -39,7 +39,7 @@
         transition: .5s;
     }
     textarea{
-        width: 70vw;
+        width: 90vw;
         height: 15vh;
         border: 1px solid rgb(245, 245, 245);
         background-color: rgb(245, 245, 245);
@@ -67,7 +67,7 @@
         box-shadow: 0 0 8px 0 #139187;
     }
     .confirm {
-        width: 70vw;
+        width: 90vw;
         border: 1px solid rgb(245, 245, 245);
         background-color: rgb(245, 245, 245);
         border-radius: 20px;
@@ -93,7 +93,7 @@
         justify-content: left;
     }
     input[type=submit]{
-        width: 70vw;
+        width: 90vw;
         border: 1px solid #139187;
         background-color: #139187;
         border-radius: 20px;
