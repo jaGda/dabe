@@ -21,7 +21,7 @@ body * {
 .footer01 {
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/bk.jpg);
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     color: white;
