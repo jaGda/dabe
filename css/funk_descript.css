@@ -67,6 +67,13 @@
         justify-content: space-around;
         align-items: center;
         color: rgb(80, 80, 80);
+        font-size: 18px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: normal;
+        padding: 50px;
+        margin: 10px auto 10px auto;
+        text-align: left;
+        font-size: 1.1em;
     }
     .func_descrip__con__imgbg {
         height: auto;
