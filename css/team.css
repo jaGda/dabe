@@ -20,13 +20,14 @@
     height: auto;
     box-shadow: 6px 6px 20px 10px rgba(0, 0, 0, 0.19);
     position: relative;
+    background-color: rgb(238, 238, 238);
 }
 
 .photo__img {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .member__header {
