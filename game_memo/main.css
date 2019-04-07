@@ -26,40 +26,88 @@ div {
 
 .red {
     background-color: red;
-}
-
-.blue {
+    background-image: url(img/dollar.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .brown {
+    background-color: brown;
+    background-image: url(img/baht.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .blue {
     background-color: blue;
-}
-
-.yellow {
+    background-image: url(img/bitcoin.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .yellow {
     background-color: yellow;
-}
-
-.green {
+    background-image: url(img/zloty.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .green {
     background-color: green;
-}
-
-.gray {
+    background-image: url(img/yen.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .gray {
     background-color: gray;
-}
-
-.lightgreen {
+    background-image: url(img/yuan.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .lightgreen {
     background-color: lightgreen;
-}
-
-.cadetblue {
+    background-image: url(img/euro.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .cadetblue {
     background-color: cadetblue;
-}
-
-.violet {
+    background-image: url(img/pound-sterling.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .violet {
     background-color: violet;
-}
-
-.off {
+    background-image: url(img/ruble.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .off {
     background-color: #eee;
-}
-
-.hidden {
+    background-image: url(img/logo.png);
+    opacity: 0.3;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .hidden {
     background-color: #000;
-}
+    background-image: url(img/logo.png);
+    opacity: 0.3;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
