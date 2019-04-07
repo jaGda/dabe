@@ -31,8 +31,8 @@ div {
     background-repeat: no-repeat;
     background-position: center;
  }
- .brown {
-    background-color: brown;
+ .orange {
+    background-color: orange;
     background-image: url(img/baht.png);
     background-size: 65%;
     background-repeat: no-repeat;
@@ -62,16 +62,16 @@ div {
     background-position: center;
  }
  
- .gray {
-    background-color: gray;
+ .brown {
+    background-color: brown;
     background-image: url(img/yuan.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
  }
  
- .lightgreen {
-    background-color: lightgreen;
+ .purple {
+    background-color: purple;
     background-image: url(img/euro.png);
     background-size: 65%;
     background-repeat: no-repeat;

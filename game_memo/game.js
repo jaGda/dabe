@@ -1,7 +1,7 @@
 const cardsColor = ["red", "red", "green", "green",
-    "blue", "blue", "brown", "brown", "yellow", "yellow",
-    "gray", "gray", "cadetblue", "cadetblue", "violet",
-    "violet", "lightgreen", "lightgreen"];
+    "blue", "blue", "orange", "orange", "yellow", "yellow",
+    "brown", "brown", "cadetblue", "cadetblue", "violet",
+    "violet", "purple", "purple"];
 
 let cards = document.querySelectorAll('div');
 
