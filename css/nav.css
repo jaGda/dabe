@@ -58,6 +58,12 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    .narrowing {
+        height: 65px;
+        transition: .5s;
+    }
+
     nav ul {
         display: flex;
         margin: 0;
@@ -81,6 +87,6 @@
         background-color: #139187;
     }
     #logo_img {
-        height: 70px;
+        height: 65px;
     }
 }
