@@ -1,32 +1,27 @@
-let gameTime;
-let timerIntervalTimer;
-
 function Timer(timer) {
-    this.timer = timer;
     this.gameTime = 0;
-    this.timeInterval = null;
+    this.interval = null;
+    this.timer = timer;
 
     this.start = () => {
-        this.timeInterval = setInterval(() => {
-            this.gameTime += 0.01;
-            this.timer.textContent = this.gameTime.toFixed(2);
-        }, 10);
-    };
+        this.interval = setInterval(() => {
+            this.gameTime += 1;
+            this.timer.innerHTML = this.gameTime;
+        }, 1000);
+    }
 
-    this.stop = () => {
-        clearInterval(this.timeInterval);
-    };
-
+    this.stop = _ => {
+        clearInterval(this.interval)
+    }
 }
 
-let startButton = document.getElementById('start');
-const time = new Timer(document.getElementById('timer'));
-startButton.addEventListener('click', time.start);
+const timer = new Timer(document.getElementById('timer'));
 
-const cardsColor = ["red", "red", "green", "green",
-    "blue", "blue", "brown", "brown", "yellow",
-    "yellow", "cadetblue", "cadetblue", "violet",
-    "violet", "lightgreen", "lightgreen"];
+/***************************************************************************************** */
+
+const cardsColor = ["red", "red", "orange", "orange", "blue", "blue",
+    "yellow", "yellow", "lightgreen", "lightgreen", "brown", "brown",
+    "purple", "purple", "cadetblue", "cadetblue", "violet", "violet"];
 
 let cards = document.querySelectorAll('.card');
 
@@ -40,7 +35,7 @@ let activeCard = '';
 
 const activeCards = [];
 
-//const startTime = new Date().getTime();
+const startTime = new Date().getTime();
 
 const clickCard = function () {
     activeCard = this;
@@ -62,10 +57,10 @@ const clickCard = function () {
                 cards = cards.filter(card => !card.classList.contains('off'));
                 if (gameResult == gamePairs) {
                     time.stop();
-                    //const endTime = new Date().getTime();
-                    //const gameTime = (endTime - startTime) / 1000;
-                    //alert(`Twoj wynik to: ${gameTime} sekund`);
-                    //location.reload();
+                    const endTime = new Date().getTime();
+                    const gameTime = (endTime - startTime) / 1000;
+                    alert(`Twoj wynik to: ${gameTime} sekund`);
+                    location.reload();
                 }
             } else {
                 activeCards.forEach(card => card.classList.add('hidden'));
@@ -91,6 +86,7 @@ const init = _ => {
     }, 1000);
 };
 
-startButton.addEventListener('click', init);
-
+document.getElementById('start').addEventListener('click', init);
+document.getElementById('start').addEventListener('click', timer.start);
+document.getElementById('pause').addEventListener('click', timer.stop);
 
