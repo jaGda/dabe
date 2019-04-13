@@ -134,13 +134,13 @@ button:focus {
     background-position: center;
  }
  
- .violet {
+ /* .violet {
     background-color: violet;
     background-image: url(img/ruble.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+ } */
  
  .off {
     background-color: rgba(19, 145, 135, 1);

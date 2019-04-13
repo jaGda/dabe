@@ -1,18 +1,25 @@
-function Timer(timer) {
-    this.gameTime = 0;
-    this.interval = null;
-    this.timer = timer;
 
-    this.start = () => {
-        this.interval = setInterval(() => {
-            this.gameTime += 1;
-            this.timer.innerHTML = this.gameTime;
-        }, 1000);
+class Timer {
+    
+    constructor(timer) {
+        this.timer = timer;
+        this.gameTime = 0;
+        this.interval = null;
+        // this.start = this.start.bind(this);
+        // this.stop = this.stop.bind(this);
     }
 
-    this.stop = _ => {
+    start(){
+        this.interval = setInterval(() => {
+            this.gameTime += 0.01;
+            this.timer.innerHTML = this.gameTime.toFixed(2);
+        }, 10);
+    }
+
+    stop() {
         clearInterval(this.interval)
     }
+
 }
 
 const timer = new Timer(document.getElementById('timer'));
@@ -21,7 +28,7 @@ const timer = new Timer(document.getElementById('timer'));
 
 const cardsColor = ["red", "red", "orange", "orange", "blue", "blue",
     "yellow", "yellow", "lightgreen", "lightgreen", "brown", "brown",
-    "purple", "purple", "cadetblue", "cadetblue", "violet", "violet"];
+    "purple", "purple", "cadetblue", "cadetblue"];
 
 let cards = document.querySelectorAll('.card');
 
@@ -60,7 +67,7 @@ const clickCard = function () {
                     const endTime = new Date().getTime();
                     const gameTime = (endTime - startTime) / 1000;
                     alert(`Twoj wynik to: ${gameTime} sekund`);
-                    location.reload();
+                    timer.stop();
                 }
             } else {
                 activeCards.forEach(card => card.classList.add('hidden'));
@@ -87,6 +94,6 @@ const init = _ => {
 };
 
 document.getElementById('start').addEventListener('click', init);
-document.getElementById('start').addEventListener('click', timer.start);
-document.getElementById('pause').addEventListener('click', timer.stop);
+document.getElementById('start').addEventListener('click', () => {timer.start()});
+document.getElementById('pause').addEventListener('click', () => {timer.stop()});
 
