@@ -26,7 +26,7 @@ body {
     font-weight: bold;
 }
 
-.start,.pause,.restart {
+.start,.pause,.restart,.rules {
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -73,66 +73,67 @@ button:focus {
 
 .red {
     background-color: red;
-    background-image: url(img/dollar.png);
+    background-image: url(../img/dollar.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
- .orange {
+}
+
+.orange {
     background-color: orange;
-    background-image: url(img/baht.png);
+    background-image: url(../img/baht.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .blue {
+.blue {
     background-color: blue;
-    background-image: url(img/bitcoin.png);
+    background-image: url(../img/bitcoin.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .yellow {
+.yellow {
     background-color: yellow;
-    background-image: url(img/zloty.png);
+    background-image: url(../img/zloty.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
 
 .lightgreen {
     background-color: lightgreen;
-    background-image: url(img/yen.png);
+    background-image: url(../img/yen.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .brown {
+.brown {
     background-color: brown;
-    background-image: url(img/yuan.png);
+    background-image: url(../img/yuan.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .purple {
+.purple {
     background-color: purple;
-    background-image: url(img/euro.png);
+    background-image: url(../img/euro.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .cadetblue {
+.cadetblue {
     background-color: cadetblue;
-    background-image: url(img/pound-sterling.png);
+    background-image: url(../img/pound-sterling.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
  /* .violet {
     background-color: violet;
@@ -142,20 +143,20 @@ button:focus {
     background-position: center;
  } */
  
- .off {
+.off {
     background-color: rgba(19, 145, 135, 1);
-    background-image: url(img/logo.png);
+    background-image: url(../img/logo.png);
     opacity: 0.3;
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}
  
- .hidden {
+.hidden {
     background-color: #000;
-    background-image: url(img/logo.png);
+    background-image: url(../img/logo.png);
     opacity: 0.3;
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
- }
+}

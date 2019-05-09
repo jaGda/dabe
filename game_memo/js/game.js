@@ -1,28 +1,3 @@
-class Timer {
-  constructor(timer) {
-    this.timer = timer;
-    this.gameTime = 0;
-    this.interval = null;
-    // this.start = this.start.bind(this);
-    // this.stop = this.stop.bind(this);
-  }
-
-  start() {
-    this.interval = setInterval(() => {
-      this.gameTime += 0.01;
-      this.timer.innerHTML = this.gameTime.toFixed(2);
-    }, 10);
-  }
-
-  stop() {
-    clearInterval(this.interval);
-  }
-}
-
-const timer = new Timer(document.getElementById("timer"));
-
-/***************************************************************************************** */
-
 const cardsColor = [
   "red",
   "red",
@@ -41,44 +16,32 @@ const cardsColor = [
   "cadetblue",
   "cadetblue"
 ];
-
 let cards = document.querySelectorAll(".card");
-
 cards = [...cards];
-
 const gamePairs = cards.length / 2;
-
 let gameResult = 0;
-
 let activeCard = "";
-
 const activeCards = [];
 
-//const startTime = new Date().getTime();
-
-const clickCard = function() {
+const clickCard = function () {
   activeCard = this;
-
-  if (activeCard == activeCards[0]) return;
-
+  if (activeCard === activeCards[0]) return;
   activeCard.classList.remove("hidden");
-
   if (activeCards.length === 0) {
     activeCards[0] = activeCard;
     return;
   } else {
-    cards.forEach(card => card.removeEventListener("click", clickCard));
     activeCards[1] = activeCard;
+    cards.forEach(card => card.removeEventListener("click", clickCard));
     setTimeout(() => {
       if (activeCards[0].className === activeCards[1].className) {
         activeCards.forEach(card => card.classList.add("off"));
         gameResult++;
         cards = cards.filter(card => !card.classList.contains("off"));
-        if (gameResult == gamePairs) {
-          //const endTime = new Date().getTime();
-          //const gameTime = (endTime - startTime) / 1000;
-          //alert(`Twoj wynik to: ${gameTime} sekund`);
+        if (gameResult === gamePairs) {
           timer.stop();
+          displayResults(results);
+          document.getElementById('results').style.display = "flex";
         }
       } else {
         activeCards.forEach(card => card.classList.add("hidden"));
