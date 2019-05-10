@@ -67,13 +67,3 @@ const init = _ => {
   }, 1000);
 };
 
-document.getElementById("start").addEventListener("click", init);
-document.getElementById("start").addEventListener("click", () => {
-  timer.start();
-});
-document.getElementById("pause").addEventListener("click", () => {
-  timer.stop();
-});
-document.getElementById("restart").addEventListener("click", () => {
-  location.reload();
-});

@@ -29,20 +29,26 @@ const displayResults = results => {
 
     const resultsArr = downloadResultsFromLocalStorage('results');
     if (resultsArr) {
-        resultsArr.push(timer.gameTime.toFixed(2));
-        results = resultsArr.sort((a, b) => a - b);
+        resultsArr.push({
+            user: valueInput,
+            gameTime: timer.gameTime.toFixed(2)
+        });
+        results = resultsArr.sort((a, b) => a.gameTime - b.gameTime);
         if (results.length > 5) {
             results.splice(5, 1);
         }
         saveToLocalStorage(results);
     } else {
-        results.push(timer.gameTime.toFixed(2));
+        results.push({
+            user: valueInput,
+            gameTime: timer.gameTime.toFixed(2)
+        });
         saveToLocalStorage(results);
     }
 
     results.map(e => {
         const listItem = document.createElement('li');
-        listItem.innerText = e;
+        listItem.innerText = `${e.user} -> ${e.gameTime}`;
         return listItem;
     }).forEach(e => document.getElementById('results-list').appendChild(e));
 }

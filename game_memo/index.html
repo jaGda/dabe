@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>memo</title>
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/userName.css" />
   <link rel="stylesheet" href="css/modal.css" />
   <link rel="stylesheet" href="css/results.css" />
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
@@ -19,11 +20,11 @@
 
   <div class="game_panel">
     <div id="timer" class="timer">00.00</div>
-    <div class="start">
-      <button id="start">START</button>
-    </div>
     <div class="pause">
       <button id="pause">PAUSE</button>
+    </div>
+    <div class="return">
+      <button id="return">RETURN</button>
     </div>
     <div class="restart">
       <button id="restart">RESTART</button>
@@ -33,17 +34,30 @@
     </div>
   </div>
 
+  <div id="userName">
+    <div class="userName-content">
+      <input type="text" id="userNameInput" value='' placeholder="Solo" required>
+      <div class="start">
+        <button id="start">START</button>
+      </div>
+      <p style="font-family: 'Stylish', sans-serif; font-size: 20px;">Gra polega na odnalezieniu w jak najkrótszym
+        czasie pary kart o tych samych symbolach. Na planszy składającej się z szesnastu kart znajduje się osiem takich
+        par. Po wprowadzeniu imienia gracza i naciśnięciu przycisku START przez sekundę zobaczymy odkryte wszystkie
+        karty. Jest to czas, aby zapamiętać jak najwięcej par, które następniemusimy odszukać i odsłonić. W jednej
+        rundzie odkryte mogą zostać wyłącznie dwie karty. Jeśli symbole są identyczne, karty zostają usunięte planszy.
+        Wygrywa gracz, który najprędzej odkryje wszystkie pary.
+      </p>
+    </div>
+  </div>
+
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p style=" font-family: 'Stylish', sans-serif;">Gra polega na odnalezieniu w jak najkrótszym czasie pary kart o
-        tych samych symbolach.
-        Na planszy składającej się z szesnastu kart znajduje się osiem takich par.
-        Po wprowadzeniu imienia gracza i naciśnięciu przycisku START
-        przez sekundę zobaczymy odkryte wszystkie karty. Jest to czas, aby zapamiętać jak najwięcej par, które
-        następniemusimy odszukać i odsłonić.
-        W jednej rundzie odkryte mogą zostać wyłącznie dwie karty.
-        Jeśli symbole są identyczne, karty zostają usunięte planszy.
+      <p style="font-family: 'Stylish', sans-serif;">Gra polega na odnalezieniu w jak najkrótszym
+        czasie pary kart o tych samych symbolach. Na planszy składającej się z szesnastu kart znajduje się osiem takich
+        par. Po wprowadzeniu imienia gracza i naciśnięciu przycisku START przez sekundę zobaczymy odkryte wszystkie
+        karty. Jest to czas, aby zapamiętać jak najwięcej par, które następniemusimy odszukać i odsłonić. W jednej
+        rundzie odkryte mogą zostać wyłącznie dwie karty. Jeśli symbole są identyczne, karty zostają usunięte planszy.
         Wygrywa gracz, który najprędzej odkryje wszystkie pary.
       </p>
     </div>
@@ -77,10 +91,11 @@
     <div class="card"></div>
   </div>
 
-  <script src="js/timer.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/timer.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/results.js"></script>
+  <script src="js/startGame.js"></script>
 
 </body>
 

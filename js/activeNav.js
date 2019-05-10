@@ -17,8 +17,8 @@ window.addEventListener("scroll", () => {
   });
 });
 
-mainNavLinks.forEach(navItem => {
-  navItem.addEventListener("click", event => {
+mainNavLinks.forEach(a => {
+  a.addEventListener("click", event => {
     event.preventDefault();
     const link = event.currentTarget;
     const section = document.querySelector(link.hash);
