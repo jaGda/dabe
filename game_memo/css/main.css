@@ -62,9 +62,15 @@ button:focus {
     align-content: space-around;
 }
 
-.card {
+.cardEasy {
     flex-basis: 24vh;
     height: 24vh;
+    background-color: rgb(166, 219, 215);
+}
+
+.cardHard {
+    flex-basis: 16vh;
+    height: 16vh;
     background-color: rgb(166, 219, 215);
 }
 
@@ -136,13 +142,37 @@ button:focus {
     background-position: center;
 }
  
- /* .violet {
+.violet {
     background-color: violet;
-    background-image: url(img/ruble.png);
+    background-image: url(../img/ruble.png);
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
- } */
+}
+
+.grey {
+    background-color: grey;
+    background-image: url(../img/riel.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sandybrown {
+    background-color:sandybrown;
+    background-image: url(../img/koruna.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.darkkhaki {
+    background-color: darkkhaki;
+    background-image: url(../img/lari.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
  
 .off {
     background-color: rgba(19, 145, 135, 1);

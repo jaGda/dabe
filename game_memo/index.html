@@ -1,102 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>memo</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/userName.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/results.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Stylish"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>memo</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/userName.css" />
-  <link rel="stylesheet" href="css/modal.css" />
-  <link rel="stylesheet" href="css/results.css" />
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <div class="game_panel">
-    <div id="timer" class="timer">00.00</div>
-    <div class="pause">
-      <button id="pause">PAUSE</button>
-    </div>
-    <div class="return">
-      <button id="return">RETURN</button>
-    </div>
-    <div class="restart">
-      <button id="restart">RESTART</button>
-    </div>
-    <div class="rules">
-      <button id="rules">RULES</button>
-    </div>
-  </div>
-
-  <div id="userName">
-    <div class="userName-content">
-      <input type="text" id="userNameInput" value='' placeholder="Solo" required>
-      <div class="start">
-        <button id="start">START</button>
+  <body>
+    <div class="game_panel">
+      <div id="timer" class="timer">00.00</div>
+      <div class="pause">
+        <button id="pause">PAUSE</button>
       </div>
-      <p style="font-family: 'Stylish', sans-serif; font-size: 20px;">Gra polega na odnalezieniu w jak najkrótszym
-        czasie pary kart o tych samych symbolach. Na planszy składającej się z szesnastu kart znajduje się osiem takich
-        par. Po wprowadzeniu imienia gracza i naciśnięciu przycisku START przez sekundę zobaczymy odkryte wszystkie
-        karty. Jest to czas, aby zapamiętać jak najwięcej par, które następniemusimy odszukać i odsłonić. W jednej
-        rundzie odkryte mogą zostać wyłącznie dwie karty. Jeśli symbole są identyczne, karty zostają usunięte planszy.
-        Wygrywa gracz, który najprędzej odkryje wszystkie pary.
-      </p>
+      <div class="return">
+        <button id="return">RETURN</button>
+      </div>
+      <div class="restart">
+        <button id="restart">RESTART</button>
+      </div>
+      <div class="rules">
+        <button id="rules">RULES</button>
+      </div>
     </div>
-  </div>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p style="font-family: 'Stylish', sans-serif;">Gra polega na odnalezieniu w jak najkrótszym
-        czasie pary kart o tych samych symbolach. Na planszy składającej się z szesnastu kart znajduje się osiem takich
-        par. Po wprowadzeniu imienia gracza i naciśnięciu przycisku START przez sekundę zobaczymy odkryte wszystkie
-        karty. Jest to czas, aby zapamiętać jak najwięcej par, które następniemusimy odszukać i odsłonić. W jednej
-        rundzie odkryte mogą zostać wyłącznie dwie karty. Jeśli symbole są identyczne, karty zostają usunięte planszy.
-        Wygrywa gracz, który najprędzej odkryje wszystkie pary.
-      </p>
+    <div id="userName">
+      <div class="userName-content">
+        <input
+          type="text"
+          id="userNameInput"
+          value=""
+          placeholder="Solo"
+          required
+        />
+        <div class="btn">
+          <button class="btn_func" id="easy">EASY</button>
+        </div>
+        <div class="btn">
+          <button class="btn_func" id="hard">HARD</button>
+        </div>
+        <p style="font-family: 'Stylish', sans-serif; font-size: 20px;">
+          Gra polega na odnalezieniu w jak najkrótszym czasie pary kart o tych
+          samych symbolach. Na planszy składającej się z szesnastu kart znajduje
+          się osiem takich par. Po wprowadzeniu imienia gracza i naciśnięciu
+          przycisku START przez sekundę zobaczymy odkryte wszystkie karty. Jest
+          to czas, aby zapamiętać jak najwięcej par, które następniemusimy
+          odszukać i odsłonić. W jednej rundzie odkryte mogą zostać wyłącznie
+          dwie karty. Jeśli symbole są identyczne, karty zostają usunięte
+          planszy. Wygrywa gracz, który najprędzej odkryje wszystkie pary.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div id="results">
-    <div class="results-content">
-      <span class="close">&times;</span>
-      <h2>Top five results ...</h2>
-      <ol id="results-list">
-      </ol>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p style="font-family: 'Stylish', sans-serif;">
+          Gra polega na odnalezieniu w jak najkrótszym czasie pary kart o tych
+          samych symbolach. Na planszy składającej się z szesnastu kart znajduje
+          się osiem takich par. Po wprowadzeniu imienia gracza i naciśnięciu
+          przycisku START przez sekundę zobaczymy odkryte wszystkie karty. Jest
+          to czas, aby zapamiętać jak najwięcej par, które następniemusimy
+          odszukać i odsłonić. W jednej rundzie odkryte mogą zostać wyłącznie
+          dwie karty. Jeśli symbole są identyczne, karty zostają usunięte
+          planszy. Wygrywa gracz, który najprędzej odkryje wszystkie pary.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="board">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-  </div>
+    <div id="results">
+      <div class="results-content">
+        <span class="close">&times;</span>
+        <h2>Top five results ...</h2>
+        <ol id="results-list"></ol>
+      </div>
+    </div>
 
-  <script src="js/game.js"></script>
-  <script src="js/timer.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/results.js"></script>
-  <script src="js/startGame.js"></script>
+    <div class="board"></div>
 
-</body>
-
+    <script src="js/createEasyCardsNode.js"></script>
+    <script src="js/createHardCardsNode.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/startGame.js"></script>
+  </body>
 </html>

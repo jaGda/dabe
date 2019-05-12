@@ -1,29 +1,8 @@
-const cardsColor = [
-  "red",
-  "red",
-  "orange",
-  "orange",
-  "blue",
-  "blue",
-  "yellow",
-  "yellow",
-  "lightgreen",
-  "lightgreen",
-  "brown",
-  "brown",
-  "purple",
-  "purple",
-  "cadetblue",
-  "cadetblue"
-];
-let cards = document.querySelectorAll(".card");
-cards = [...cards];
-const gamePairs = cards.length / 2;
 let gameResult = 0;
 let activeCard = "";
 const activeCards = [];
 
-const clickCard = function () {
+const clickCard = function(cards) {
   activeCard = this;
   if (activeCard === activeCards[0]) return;
   activeCard.classList.remove("hidden");
@@ -41,19 +20,19 @@ const clickCard = function () {
         if (gameResult === gamePairs) {
           timer.stop();
           displayResults(results);
-          document.getElementById('results').style.display = "flex";
+          document.getElementById("results").style.display = "flex";
         }
       } else {
         activeCards.forEach(card => card.classList.add("hidden"));
       }
       activeCard = "";
       activeCards.length = 0;
-      cards.forEach(card => card.addEventListener("click", clickCard));
+      cards.forEach(card => card.addEventListener("click", cards => clickCard(cards)));
     }, 500);
   }
 };
 
-const init = _ => {
+const init = (cards, cardsColor) => {
   cards.forEach(card => {
     const position = Math.floor(Math.random() * cardsColor.length);
     card.classList.add(cardsColor[position]);
@@ -62,8 +41,7 @@ const init = _ => {
   setTimeout(() => {
     cards.forEach(card => {
       card.classList.add("hidden");
-      card.addEventListener("click", clickCard);
+      card.addEventListener("click", cards => clickCard(cards));
     });
   }, 1000);
 };
-
