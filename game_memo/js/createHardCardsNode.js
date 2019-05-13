@@ -1,4 +1,4 @@
-const cardsColorHard = [
+const hardLevelClasses = [
   "red",
   "red",
   "orange",
@@ -25,11 +25,11 @@ const cardsColorHard = [
   "darkkhaki"
 ];
 
-const cardsNodeHard = _ => {
-  cardsColorHard.forEach(color => {
-    const parent = document.querySelector(".board");
+const hardLevelNodes = _ => {
+  hardLevelClasses.forEach(hardLevelClass => {
+    const board = document.querySelector(".board");
     const card = document.createElement("div");
     card.classList.add("cardHard");
-    parent.appendChild(card);
+    board.appendChild(card);
   });
 };

@@ -1,4 +1,4 @@
-const cardsColorEasy = [
+const easyLevelClasses = [
   "red",
   "red",
   "orange",
@@ -17,11 +17,11 @@ const cardsColorEasy = [
   "cadetblue"
 ];
 
-const cardsNodeEasy = _ => {
-  cardsColorEasy.forEach(color => {
-    const parent = document.querySelector(".board");
+const easyLevelNodes = _ => {
+  easyLevelClasses.forEach(easyLevelClass => {
+    const board = document.querySelector(".board");
     const card = document.createElement("div");
     card.classList.add("cardEasy");
-    parent.appendChild(card);
+    board.appendChild(card);
   });
 };

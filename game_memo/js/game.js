@@ -1,8 +1,12 @@
+let cardsColor;
+let cards;
+let gamePairs;
+
 let gameResult = 0;
 let activeCard = "";
 const activeCards = [];
 
-const clickCard = function(cards) {
+const clickCard = function() {
   activeCard = this;
   if (activeCard === activeCards[0]) return;
   activeCard.classList.remove("hidden");
@@ -19,7 +23,7 @@ const clickCard = function(cards) {
         cards = cards.filter(card => !card.classList.contains("off"));
         if (gameResult === gamePairs) {
           timer.stop();
-          displayResults(results);
+          displayResults();
           document.getElementById("results").style.display = "flex";
         }
       } else {
@@ -27,12 +31,12 @@ const clickCard = function(cards) {
       }
       activeCard = "";
       activeCards.length = 0;
-      cards.forEach(card => card.addEventListener("click", cards => clickCard(cards)));
+      cards.forEach(card => card.addEventListener("click", clickCard));
     }, 500);
   }
 };
 
-const init = (cards, cardsColor) => {
+const init = _ => {
   cards.forEach(card => {
     const position = Math.floor(Math.random() * cardsColor.length);
     card.classList.add(cardsColor[position]);
@@ -41,7 +45,7 @@ const init = (cards, cardsColor) => {
   setTimeout(() => {
     cards.forEach(card => {
       card.classList.add("hidden");
-      card.addEventListener("click", cards => clickCard(cards));
+      card.addEventListener("click", clickCard);
     });
   }, 1000);
 };

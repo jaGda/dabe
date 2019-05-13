@@ -1,4 +1,3 @@
-/*********************************************************** */
 const resultsList = document.querySelector('#results');
 const span2 = document.getElementsByClassName("close")[1];
 
@@ -7,8 +6,8 @@ window.onclick = event => {
     if (event.target == resultsList) {
         resultsList.style.display = "none";
     }
-}
-/*********************************************************** */
+};
+
 const results = [];
 
 const saveToLocalStorage = toSave => {
@@ -51,4 +50,4 @@ const displayResults = results => {
         listItem.innerText = `${e.user} -> ${e.gameTime}`;
         return listItem;
     }).forEach(e => document.getElementById('results-list').appendChild(e));
-}
+};
