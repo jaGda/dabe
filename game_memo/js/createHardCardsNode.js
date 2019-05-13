@@ -27,7 +27,7 @@ const hardLevelClasses = [
 
 const hardLevelNodes = _ => {
   hardLevelClasses.forEach(hardLevelClass => {
-    const board = document.querySelector(".board");
+    const board = document.querySelector("#board");
     const card = document.createElement("div");
     card.classList.add("cardHard");
     board.appendChild(card);

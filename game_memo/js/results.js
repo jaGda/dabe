@@ -1,53 +1,100 @@
-const resultsList = document.querySelector('#results');
-const span2 = document.getElementsByClassName("close")[1];
+const results = [[], []];
+const resultsArr = downloadResultsFromLocalStorage("results");
 
-span2.onclick = _ => resultsList.style.display = "none";
-window.onclick = event => {
-    if (event.target == resultsList) {
-        resultsList.style.display = "none";
-    }
-};
-
-const results = [];
-
-const saveToLocalStorage = toSave => {
-    const toSaveString = JSON.stringify(toSave);
-    localStorage.setItem('results', toSaveString);
-};
-
-const downloadResultsFromLocalStorage = key => JSON.parse(localStorage.getItem(key));
-
-const displayResults = results => {
-
-    const list = [...document.querySelectorAll('li')];
-    if (list) {
-        list.forEach(e => e.remove());
-    } else {
-        return;
-    };
-
-    const resultsArr = downloadResultsFromLocalStorage('results');
-    if (resultsArr) {
-        resultsArr.push({
-            user: valueInput,
-            gameTime: timer.gameTime.toFixed(2)
-        });
-        results = resultsArr.sort((a, b) => a.gameTime - b.gameTime);
-        if (results.length > 5) {
-            results.splice(5, 1);
-        }
-        saveToLocalStorage(results);
-    } else {
-        results.push({
-            user: valueInput,
-            gameTime: timer.gameTime.toFixed(2)
-        });
-        saveToLocalStorage(results);
-    }
-
-    results.map(e => {
-        const listItem = document.createElement('li');
-        listItem.innerText = `${e.user} -> ${e.gameTime}`;
+const displayResultsHardLevel = _ => {
+  if (resultsArr === null) {
+    results[1].push({
+      user: valueInput,
+      gameTime: timer.gameTime.toFixed(2)
+    });
+    saveToLocalStorage(results);
+    results[1]
+      .map(item => {
+        const listItem = document.createElement("li");
+        listItem.innerText = `${item.user} -> ${item.gameTime}`;
         return listItem;
-    }).forEach(e => document.getElementById('results-list').appendChild(e));
+      })
+      .forEach(item =>
+        document.getElementById("results-list_hard").appendChild(item)
+      );
+  } else {
+    resultsArr[1].push({
+      user: valueInput,
+      gameTime: timer.gameTime.toFixed(2)
+    });
+    resultsArr[1].sort((a, b) => a.gameTime - b.gameTime);
+    if (resultsArr[1].length > 5) {
+      resultsArr[1].splice(5, 1);
+    }
+    saveToLocalStorage(resultsArr);
+    if (resultsArr[0]) {
+      resultsArr[0]
+        .map(item => {
+          const listItem = document.createElement("li");
+          listItem.innerText = `${item.user} -> ${item.gameTime}`;
+          return listItem;
+        })
+        .forEach(item =>
+          document.getElementById("results-list_easy").appendChild(item)
+        );
+    }
+    resultsArr[1]
+      .map(item => {
+        const listItem = document.createElement("li");
+        listItem.innerText = `${item.user} -> ${item.gameTime}`;
+        return listItem;
+      })
+      .forEach(item =>
+        document.getElementById("results-list_hard").appendChild(item)
+      );
+  }
+};
+
+const displayResultsEasyLevel = _ => {
+  if (resultsArr === null) {
+    results[0].push({
+      user: valueInput,
+      gameTime: timer.gameTime.toFixed(2)
+    });
+    saveToLocalStorage(results);
+    results[0]
+      .map(item => {
+        const listItem = document.createElement("li");
+        listItem.innerText = `${item.user} -> ${item.gameTime}`;
+        return listItem;
+      })
+      .forEach(item =>
+        document.getElementById("results-list_easy").appendChild(item)
+      );
+  } else {
+    resultsArr[0].push({
+      user: valueInput,
+      gameTime: timer.gameTime.toFixed(2)
+    });
+    resultsArr[0].sort((a, b) => a.gameTime - b.gameTime);
+    if (resultsArr[0].length > 5) {
+      resultsArr[0].splice(5, 1);
+    }
+    saveToLocalStorage(resultsArr);
+    if (resultsArr[1]) {
+      resultsArr[1]
+        .map(item => {
+          const listItem = document.createElement("li");
+          listItem.innerText = `${item.user} -> ${item.gameTime}`;
+          return listItem;
+        })
+        .forEach(item =>
+          document.getElementById("results-list_hard").appendChild(item)
+        );
+    }
+    resultsArr[0]
+      .map(item => {
+        const listItem = document.createElement("li");
+        listItem.innerText = `${item.user} -> ${item.gameTime}`;
+        return listItem;
+      })
+      .forEach(item =>
+        document.getElementById("results-list_easy").appendChild(item)
+      );
+  }
 };

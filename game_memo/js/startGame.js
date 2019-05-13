@@ -6,11 +6,14 @@ const startInitHard = _ => {
   hardLevelNodes();
   cards = [...document.querySelectorAll(".cardHard")];
   gamePairs = cards.length / 2;
+  levelHard = true;
   init();
   timer.start();
 };
 
 document.getElementById("hard").onclick = _ => {
+  document.getElementById("board").classList.remove("board");
+  document.getElementById("board").classList.add("board_hard");
   valueInput = document.getElementById("userNameInput").value;
   valueInput ? startInitHard() : alert("Username is required.");
 };
@@ -21,6 +24,7 @@ const startInitEasy = _ => {
   easyLevelNodes();
   cards = [...document.querySelectorAll(".cardEasy")];
   gamePairs = cards.length / 2;
+  levelHard = false;
   init();
   timer.start();
 };

@@ -6,6 +6,8 @@ let gameResult = 0;
 let activeCard = "";
 const activeCards = [];
 
+let levelHard;
+
 const clickCard = function() {
   activeCard = this;
   if (activeCard === activeCards[0]) return;
@@ -23,7 +25,7 @@ const clickCard = function() {
         cards = cards.filter(card => !card.classList.contains("off"));
         if (gameResult === gamePairs) {
           timer.stop();
-          displayResults();
+          levelHard ? displayResultsHardLevel() : displayResultsEasyLevel();
           document.getElementById("results").style.display = "flex";
         }
       } else {

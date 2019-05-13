@@ -62,15 +62,19 @@ button:focus {
     align-content: space-around;
 }
 
-.cardEasy {
-    flex-basis: 24vh;
-    height: 24vh;
-    background-color: rgb(166, 219, 215);
+.board_hard {
+    background-color: rgba(19, 145, 135, 1);
+    flex-basis: 150vh;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
-.cardHard {
-    flex-basis: 16vh;
-    height: 16vh;
+.cardEasy,.cardHard {
+    flex-basis: 24vh;
+    height: 24vh;
     background-color: rgb(166, 219, 215);
 }
 
