@@ -1,197 +1,274 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Indie Flower', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
 }
 
 body {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(246, 250, 250);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(246, 250, 250);
 }
 
 .game_panel {
-    flex-basis: 15vh;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(19, 145, 135, 1);
+  flex-basis: 15vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(19, 145, 135, 1);
 }
 
 .timer {
-    margin: 10px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+  margin: 10px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.return,.pause,.restart,.rules {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.return,
+.pause,
+.restart,
+.rules {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    border:0;
+  border: 0;
+  border-radius: 5px;
+  height: 32px;
+  font-weight: bolder;
+  width: 100%;
+  background: rgb(152, 224, 241);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  background: rgb(146, 146, 146);
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+.board {
+  background-color: rgba(19, 145, 135, 1);
+  flex-basis: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.board_hard {
+  background-color: rgba(19, 145, 135, 1);
+  flex-basis: 150vh;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.cardEasy,
+.cardHard {
+  flex-basis: 24vh;
+  height: 24vh;
+  background-color: rgb(166, 219, 215);
+}
+
+@media (orientation: portrait) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .game_panel {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-basis: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(19, 145, 135, 1);
+  }
+
+  .timer {
+    align-self: center;
+    width: 7vh;
+    margin: 5px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .return,
+  .pause,
+  .restart,
+  .rules {
+    align-self: center;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    align-self: center;
+    border: 0;
+    padding: 5px;
     border-radius: 5px;
     height: 32px;
     font-weight: bolder;
     width: 100%;
     background: rgb(152, 224, 241);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
-}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-button:hover {
-    background: rgb(146, 146, 146);
-    color: white;
-}
-
-button:focus {
-    outline: none;
-}
-
-.board {
+  .board,
+  .board_hard {
     background-color: rgba(19, 145, 135, 1);
-    flex-basis: 100vh;
-    height: 100vh;
+    flex-basis: 94vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-around;
-}
+    align-content: stretch;
+  }
 
-.board_hard {
-    background-color: rgba(19, 145, 135, 1);
-    flex-basis: 150vh;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
-
-.cardEasy,.cardHard {
-    flex-basis: 24vh;
-    height: 24vh;
+  .cardEasy {
+    flex-basis: 24vw;
+    height: 23vh;
     background-color: rgb(166, 219, 215);
-}
+  }
 
-@media (orientation: portrait) {
-    /* TODO */
-} 
+  .cardHard {
+    flex-basis: 24vw;
+    height: 15vh;
+    background-color: rgb(166, 219, 215);
+  }
+}
 
 .red {
-    background-color: red;
-    background-image: url(../img/dollar.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: red;
+  background-image: url(../img/dollar.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .orange {
-    background-color: orange;
-    background-image: url(../img/baht.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: orange;
+  background-image: url(../img/baht.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .blue {
-    background-color: blue;
-    background-image: url(../img/bitcoin.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: blue;
+  background-image: url(../img/bitcoin.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .yellow {
-    background-color: yellow;
-    background-image: url(../img/zloty.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: yellow;
+  background-image: url(../img/zloty.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .lightgreen {
-    background-color: lightgreen;
-    background-image: url(../img/yen.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: lightgreen;
+  background-image: url(../img/yen.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .brown {
-    background-color: brown;
-    background-image: url(../img/yuan.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: brown;
+  background-image: url(../img/yuan.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .purple {
-    background-color: purple;
-    background-image: url(../img/euro.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: purple;
+  background-image: url(../img/euro.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .cadetblue {
-    background-color: cadetblue;
-    background-image: url(../img/pound-sterling.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: cadetblue;
+  background-image: url(../img/pound-sterling.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .violet {
-    background-color: violet;
-    background-image: url(../img/ruble.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: violet;
+  background-image: url(../img/ruble.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .grey {
-    background-color: grey;
-    background-image: url(../img/riel.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: grey;
+  background-image: url(../img/riel.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .sandybrown {
-    background-color:sandybrown;
-    background-image: url(../img/koruna.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: sandybrown;
+  background-image: url(../img/koruna.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .darkkhaki {
-    background-color: darkkhaki;
-    background-image: url(../img/lari.png);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: darkkhaki;
+  background-image: url(../img/lari.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .off {
-    background-color: rgba(19, 145, 135, 1);
-    background-image: url(../img/logo.png);
-    opacity: 0.3;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: rgba(19, 145, 135, 1);
+  background-image: url(../img/logo.png);
+  opacity: 0.3;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
- 
+
 .hidden {
-    background-color: #000;
-    background-image: url(../img/logo.png);
-    opacity: 0.3;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: #000;
+  background-image: url(../img/logo.png);
+  opacity: 0.3;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }

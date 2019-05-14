@@ -8,7 +8,7 @@
     height: 100%;
     background-color: rgba(0,0,0,0.4);
 }
-  
+
 .userName-content {
     align-self: center;
     display: flex;
@@ -60,4 +60,15 @@
 #hard:hover {
     background: rgb(255, 1, 1);
     color: white;
+}
+
+@media (orientation: portrait) {
+
+    .userName-content {
+        margin: 1vw 2vh;
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding: 10px;
+    }
+
 }
