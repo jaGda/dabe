@@ -25,7 +25,7 @@ const clickCard = function() {
         cards = cards.filter(card => !card.classList.contains("off"));
         if (gameResult === gamePairs) {
           timer.stop();
-          levelHard ? displayResultsHardLevel() : displayResultsEasyLevel();
+          levelHard ? displayLevelHardResults() : displayLevelEasyResults();
           document.getElementById("results").style.display = "flex";
         }
       } else {

@@ -1,4 +1,4 @@
-const easyLevelClasses = [
+const levelEasyClasses = [
   "red",
   "red",
   "orange",
@@ -17,8 +17,8 @@ const easyLevelClasses = [
   "cadetblue"
 ];
 
-const easyLevelNodes = _ => {
-  easyLevelClasses.forEach(easyLevelClass => {
+const levelEasyNodes = _ => {
+  levelEasyClasses.forEach(levelEasyClass => {
     const board = document.querySelector(".board");
     const card = document.createElement("div");
     card.classList.add("cardEasy");

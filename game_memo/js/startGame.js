@@ -2,8 +2,8 @@ let valueInput;
 
 const startInitHard = _ => {
   document.getElementById("userName").style.display = "none";
-  cardsColor = hardLevelClasses;
-  hardLevelNodes();
+  cardsColor = levelHardClasses;
+  levelHardNodes();
   cards = [...document.querySelectorAll(".cardHard")];
   gamePairs = cards.length / 2;
   levelHard = true;
@@ -11,22 +11,24 @@ const startInitHard = _ => {
   timer.start();
 };
 
-document.getElementById("hard").onclick = _ => {
-  document.getElementById("board").classList.remove("board");
-  document.getElementById("board").classList.add("board_hard");
-  valueInput = document.getElementById("userNameInput").value;
-  valueInput ? startInitHard() : alert("Username is required.");
-};
-
 const startInitEasy = _ => {
   document.getElementById("userName").style.display = "none";
-  cardsColor = easyLevelClasses;
-  easyLevelNodes();
+  cardsColor = levelEasyClasses;
+  levelEasyNodes();
   cards = [...document.querySelectorAll(".cardEasy")];
   gamePairs = cards.length / 2;
   levelHard = false;
   init();
   timer.start();
+};
+
+document.getElementById("hard").onclick = _ => {
+  valueInput = document.getElementById("userNameInput").value;
+  if (valueInput) {
+    document.getElementById("board").classList.remove("board");
+    document.getElementById("board").classList.add("board_hard");
+  }
+  valueInput ? startInitHard() : alert("Username is required.");
 };
 
 document.getElementById("easy").onclick = _ => {
